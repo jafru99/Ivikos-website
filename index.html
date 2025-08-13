@@ -29,6 +29,7 @@
             padding: 0 20px;
         }
 
+        /* Header */
         header {
             padding: 20px 0;
             background: rgba(255, 255, 255, 0.05);
@@ -53,6 +54,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+            cursor: pointer;
         }
 
         .nav-links {
@@ -69,7 +71,7 @@
             position: relative;
         }
 
-        .nav-links a:hover {
+        .nav-links a:hover, .nav-links a.active {
             color: #00d4ff;
         }
 
@@ -84,10 +86,11 @@
             transition: width 0.3s ease;
         }
 
-        .nav-links a:hover::after {
+        .nav-links a:hover::after, .nav-links a.active::after {
             width: 100%;
         }
 
+        /* Hero Section */
         .hero {
             text-align: center;
             padding: 100px 0;
@@ -147,11 +150,7 @@
             color: #ffffff;
         }
 
-        .products {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
+        /* Product Card */
         .product-card {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 20px;
@@ -182,6 +181,7 @@
             margin-bottom: 30px;
         }
 
+        /* App Store Buttons */
         .app-stores {
             display: flex;
             justify-content: center;
@@ -240,10 +240,7 @@
             font-size: 1.1rem;
         }
 
-        .contact {
-            background: linear-gradient(45deg, rgba(0, 212, 255, 0.1), rgba(255, 0, 212, 0.1));
-        }
-
+        /* Contact Info */
         .contact-info {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -287,6 +284,7 @@
             color: #00d4ff;
         }
 
+        /* Footer */
         footer {
             background: rgba(0, 0, 0, 0.5);
             padding: 40px 0;
@@ -299,6 +297,7 @@
             margin-bottom: 10px;
         }
 
+        /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .nav-links {
                 gap: 15px;
@@ -328,44 +327,33 @@
         <nav class="container">
             <div class="logo">Ivikos</div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pocket-oracle.html">Pocket Oracle</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
+    <section class="hero">
         <div class="container">
             <h1>AI-Powered Innovation</h1>
             <p>Ivikos is at the forefront of AI application development, creating intelligent solutions that transform how you interact with technology.</p>
-            <a href="#products" class="cta-button">Discover Our App</a>
+            <a href="pocket-oracle.html" class="cta-button">Discover Our App</a>
         </div>
     </section>
 
-    <section id="products" class="section products">
+    <section class="section" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.1);">
         <div class="container">
             <h2>Our Flagship Product</h2>
             <div class="product-card">
                 <h3>Pocket Oracle</h3>
-                <p>🌟 **Pocket Oracle**<br>
-                Your Personal Guide to the I Ching<br><br>
-                Pocket Oracle is a modern spiritual companion that brings the ancient wisdom of the I Ching to your fingertips. Ask your question, cast your hexagram, and receive thoughtful, AI-generated insights rooted in classical text inspired by Wilhelm, filtered through modern clarity.<br><br>
-                Whether you're seeking clarity on relationships, decisions, or personal growth, Pocket Oracle helps you reflect deeply and intuitively. Each reading is unique, drawing from a blend of tradition and advanced AI to offer guidance that feels both timeless and personal.</p>
-                <p>🔮 **Features:**</p>
-                <ul>
-                    <li>Coin toss or manual hexagram selection</li>
-                    <li>Instant AI interpretations based on your changing lines</li>
-                    <li>Judgement, Image, and custom insights for every reading</li>
-                    <li>Clean, calming interface designed for contemplation</li>
-                    <li>Save and revisit your readings anytime</li>
-                </ul>
+                <p>Pocket Oracle is a modern I Ching–inspired app that delivers instant, AI-powered divinations and guidance based on your questions.</p>
                 <p><strong>Coming Soon to Mobile Platforms</strong></p>
-
+                
                 <div class="app-stores">
                     <a href="#" class="store-button">
                         <div class="store-icon apple-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                             </svg>
                         </div>
@@ -390,7 +378,7 @@
         </div>
     </section>
 
-    <section id="contact" class="section contact">
+    <section id="contact" class="section" style="background: linear-gradient(45deg, rgba(0, 212, 255, 0.1), rgba(255, 0, 212, 0.1));">
         <div class="container">
             <h2>Get In Touch</h2>
             <div class="contact-info">
@@ -425,7 +413,7 @@
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -439,10 +427,7 @@
             });
         });
 
-        // Smooth scroll behavior
-        document.documentElement.style.scrollBehavior = 'smooth';
-
-        // Add intersection observer for animations
+        // Intersection observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'

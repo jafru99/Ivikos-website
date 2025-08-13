@@ -150,7 +150,7 @@
             color: #ffffff;
         }
 
-        /* Product Card */
+        /* Product Card - Now Clickable */
         .product-card {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 20px;
@@ -161,6 +161,10 @@
             transition: all 0.3s ease;
             max-width: 800px;
             margin: 0 auto;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         .product-card:hover {
@@ -169,16 +173,45 @@
             border-color: rgba(0, 212, 255, 0.3);
         }
 
+        .product-card:active {
+            transform: translateY(-8px);
+        }
+
         .product-card h3 {
             font-size: 2rem;
             margin-bottom: 20px;
             color: #00d4ff;
+            transition: color 0.3s ease;
+        }
+
+        .product-card:hover h3 {
+            color: #ff00d4;
         }
 
         .product-card p {
             font-size: 1.1rem;
             color: #cccccc;
             margin-bottom: 30px;
+        }
+
+        /* Click indicator */
+        .product-card::after {
+            content: '→';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            color: #00d4ff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-card {
+            position: relative;
+        }
+
+        .product-card:hover::after {
+            opacity: 1;
         }
 
         /* App Store Buttons */
@@ -201,6 +234,7 @@
             text-decoration: none;
             transition: all 0.3s ease;
             min-width: 200px;
+            pointer-events: none; /* Prevent clicks on store buttons when card is clicked */
         }
 
         .store-button:hover {
@@ -319,6 +353,10 @@
             .contact-info {
                 grid-template-columns: 1fr;
             }
+
+            .product-card::after {
+                display: none; /* Hide arrow on mobile for cleaner look */
+            }
         }
     </style>
 </head>
@@ -345,13 +383,13 @@
     <section class="section" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.1);">
         <div class="container">
             <h2>Our Flagship Product</h2>
-            <div class="product-card">
+            <a href="pocket-oracle.html" class="product-card">
                 <h3>Pocket Oracle</h3>
                 <p>Pocket Oracle is a modern I Ching–inspired app that delivers instant, AI-powered divinations and guidance based on your questions.</p>
                 <p><strong>Coming Soon to Mobile Platforms</strong></p>
                 
                 <div class="app-stores">
-                    <a href="#" class="store-button">
+                    <div class="store-button">
                         <div class="store-icon apple-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
@@ -361,8 +399,8 @@
                             <div>Download on the</div>
                             <strong>App Store</strong>
                         </div>
-                    </a>
-                    <a href="#" class="store-button">
+                    </div>
+                    <div class="store-button">
                         <div class="store-icon android-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1518-.5972.416.416 0 00-.5972.1518l-2.0223 3.503C15.5902 8.2439 13.8533 7.8508 12 7.8508s-3.5902.3931-5.1333 1.0431L4.8442 5.3909a.416.416 0 00-.5972-.1518.416.416 0 00-.1518.5972L6.0923 9.321C3.7485 10.8414 2.2602 13.4201 2 16.3993h20c-.2602-2.9792-1.7485-5.5579-4.0923-7.0779"/>
@@ -372,9 +410,9 @@
                             <div>Get it on</div>
                             <strong>Google Play</strong>
                         </div>
-                    </a>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 
@@ -389,15 +427,15 @@
                 </div>
                 <div class="contact-item">
                     <h3>Phone</h3>
-                    <p><a href="tel:+1234567890">+61 452419873</a></p>
+                    <p><a href="tel:+61452419873">+61 452419873</a></p>
                 </div>
                 <div class="contact-item">
                     <h3>Address</h3>
-                    <p>24 Tundra Esplanade<br>Werribee, Vic 3030<br>Austrlia</p>
+                    <p>24 Tundra Esplanade<br>Werribee, Vic 3030<br>Australia</p>
                 </div>
                 <div class="contact-item">
                     <h3>Business Hours</h3>
-                    <p>Monday - Friday<br>9:00 AM - 6:00 PM PST</p>
+                    <p>Monday - Friday<br>9:00 AM - 6:00 PM AEST</p>
                 </div>
             </div>
         </div>

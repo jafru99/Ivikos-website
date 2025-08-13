@@ -111,9 +111,37 @@
             animation: glow 2s ease-in-out infinite alternate;
         }
 
+        /* Hero Title with Logo */
+        .hero-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .hero-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+            animation: logoGlow 2s ease-in-out infinite alternate;
+        }
+
         @keyframes glow {
             from { text-shadow: 0 0 20px rgba(0, 212, 255, 0.5); }
             to { text-shadow: 0 0 30px rgba(0, 212, 255, 0.8); }
+        }
+
+        @keyframes logoGlow {
+            from { 
+                box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+                transform: scale(1);
+            }
+            to { 
+                box-shadow: 0 12px 35px rgba(255, 0, 212, 0.5);
+                transform: scale(1.02);
+            }
         }
 
         .hero p {
@@ -316,6 +344,16 @@
                 margin: 10px auto;
                 text-align: center;
             }
+
+            .hero-title {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero-logo {
+                width: 100px;
+                height: 100px;
+            }
         }
     </style>
 </head>
@@ -335,7 +373,10 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Pocket Oracle</h1>
+            <div class="hero-title">
+                <img src="pocket-oracle-logo.png" alt="Pocket Oracle Logo" class="hero-logo">
+                <h1>Pocket Oracle</h1>
+            </div>
             <p>Your AI-powered assistant that fits in your pocket. Get instant answers, smart suggestions, and personalized insights wherever you go.</p>
             <div>
                 <a href="privacy-policy.html" class="page-button">Privacy Policy</a>

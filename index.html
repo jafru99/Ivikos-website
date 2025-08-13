@@ -184,6 +184,32 @@
             transition: color 0.3s ease;
         }
 
+        /* Product Header with Logo */
+        .product-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .product-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover .product-logo {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 0, 212, 0.4);
+        }
+
+        .product-header h3 {
+            margin-bottom: 0;
+        }
+
         .product-card:hover h3 {
             color: #ff00d4;
         }
@@ -357,6 +383,16 @@
             .product-card::after {
                 display: none; /* Hide arrow on mobile for cleaner look */
             }
+
+            .product-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .product-logo {
+                width: 60px;
+                height: 60px;
+            }
         }
     </style>
 </head>
@@ -384,7 +420,10 @@
         <div class="container">
             <h2>Our Flagship Product</h2>
             <a href="pocket-oracle.html" class="product-card">
-                <h3>Pocket Oracle</h3>
+                <div class="product-header">
+                    <img src="pocket-oracle-logo.png" alt="Pocket Oracle Logo" class="product-logo">
+                    <h3>Pocket Oracle</h3>
+                </div>
                 <p>Pocket Oracle is a modern I Ching–inspired app that delivers instant, AI-powered divinations and guidance based on your questions.</p>
                 <p><strong>Coming Soon to Mobile Platforms</strong></p>
                 

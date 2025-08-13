@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use - Pocket Oracle | Ivikos</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #00d4ff, #ff00d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #00d4ff;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(90deg, #00d4ff, #ff00d4);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #ffffff;
+        }
+
+        .section h3 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #00d4ff;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            color: #cccccc;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .section ul {
+            color: #cccccc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Legal Content */
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .legal-content h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, #ffffff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .legal-content h4 {
+            color: #00d4ff;
+            font-size: 1.3rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .legal-content h4:first-of-type {
+            margin-top: 0;
+        }
+
+        .legal-content a {
+            color: #00d4ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .legal-content a:hover {
+            color: #ff00d4;
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-box h5 {
+            color: #00d4ff;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Back Button */
+        .back-button {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content p {
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 15px;
+            }
+
+            .legal-content {
+                padding: 20px;
+            }
+
+            .legal-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html">Ivikos</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pocket-oracle.html">Pocket Oracle</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <a href="pocket-oracle.html" class="back-button">← Back to Pocket Oracle</a>
+            <div class="legal-content">
+                <h1>Terms of Use</h1>
+                <p><strong>Effective Date:</strong> January 15, 2025</p>
+                <p><strong>Last Updated:</strong> January 15, 2025</p>
+
+                <h4>1. Acceptance of Terms</h4>
+                <p>By downloading, installing, or using the Pocket Oracle mobile application ("App"), you agree to be bound by these Terms of Use ("Terms"). If you do not agree to these Terms, do not use the App. These Terms constitute a legally binding agreement between you and Ivikos.</p>
+
+                <h4>2. Description of Service</h4>
+                <p>Pocket Oracle is an AI-powered mobile application that provides I Ching divination services, wisdom guidance, and spiritual insights. The App uses OpenAI's GPT-4o-mini model to generate personalized interpretations and responses based on traditional I Ching principles. Our service is intended for entertainment, personal reflection, and spiritual guidance purposes.</p>
+
+                <h4>3. User Accounts and Authentication</h4>
+                <p>To access the App's features, you must create an account using Google Sign-In or email registration. You are responsible for:</p>
+                <ul>
+                    <li>Maintaining the confidentiality of your account credentials</li>
+                    <li>All activities that occur under your account</li>
+                    <li>Immediately notifying us of any unauthorized use</li>
+                    <li>Providing accurate and complete registration information</li>
+                    <li>Keeping your contact information current</li>
+                </ul>
+
+                <h4>4. AI-Generated Content and Disclaimers</h4>
+                <div class="highlight-box">
+                    <h5>Important AI Content Notice:</h5>
+                    <p>Our App uses artificial intelligence (OpenAI's GPT-4o-mini) to generate I Ching interpretations and guidance. You acknowledge and understand that:</p>
+                </div>
+                <ul>
+                    <li><strong>AI Limitations:</strong> AI-generated content may not always be accurate, appropriate, or suitable for your specific situation</li>
+                    <li><strong>No Guaranteed Accuracy:</strong> We cannot guarantee the accuracy, completeness, or reliability of AI responses</li>
+                    <li><strong>Personal Responsibility:</strong> You should verify important information independently and use your own judgment</li>
+                    <li><strong>Entertainment Purpose:</strong> Our service is primarily for entertainment, personal reflection, and spiritual exploration</li>
+                    <li><strong>Not Professional Advice:</strong> AI responses are not medical, legal, financial, or professional advice</li>
+                    <li><strong>Model Information:</strong> We currently use OpenAI's GPT-4o-mini model, which may be updated or changed without notice</li>
+                </ul>
+
+                <h4>5. Fair Use Policy and Service Limits</h4>
+                <div class="highlight-box">
+                    <h5>Service Usage Guidelines:</h5>
+                    <p>To ensure quality service for all users and manage our API costs responsibly, we implement usage limits:</p>
+                </div>
+                <ul>
+                    <li><strong>Rate Limiting:</strong> Soft limits are applied to API calls to prevent abuse and ensure service availability</li>
+                    <li><strong>Daily Limits:</strong> A reasonable number of I Ching consultations per day to prevent system overload</li>
+                    <li><strong>Quality Service:</strong> Limits help us maintain response quality and server performance</li>
+                    <li><strong>Fair Access:</strong> Ensures all users have equitable access to our AI services</li>
+                    <li><strong>Automatic Reset:</strong> Usage limits reset daily to provide continued access</li>
+                    <li><strong>Premium Options:</strong> Higher limits may be available through subscription plans</li>
+                </ul>
+                <p>If you reach your usage limit, you may need to wait until the next reset period or consider upgrading your plan.</p>
+
+                <h4>6. Acceptable Use Policy</h4>
+                <p>You agree to use the App only for lawful purposes and in accordance with these Terms. You agree NOT to:</p>
+                <ul>
+                    <li>Use the App for any illegal, harmful, or unauthorized purpose</li>
+                    <li>Attempt to circumvent or abuse our API rate limits or usage restrictions</li>
+                    <li>Make excessive requests that could impact service availability for other users</li>
+                    <li>Attempt to gain unauthorized access to our systems or other users' accounts</li>
+                    <li>Interfere with or disrupt the App's functionality or servers</li>
+                    <li>Upload or transmit harmful, offensive, or inappropriate content</li>
+                    <li>Reverse engineer, decompile, or disassemble the App</li>
+                    <li>Use the App to harass, abuse, or harm others</li>
+                    <li>Violate any applicable laws or regulations</li>
+                    <li>Use automated systems to access the App without permission</li>
+                </ul>
+
+                <h4>7. Third-Party Services and Integration</h4>
+                <p><strong>OpenAI Services:</strong></p>
+                <p>Our App integrates with OpenAI's API services. Your use of AI features is also subject to <a href="https://openai.com/terms/" target="_blank">OpenAI's Terms of Use</a>. We are not responsible for OpenAI's service availability, changes to their API, or their terms and policies.</p>
+                
+                <p><strong>Google Services:</strong></p>
+                <p>Authentication and data storage services are provided by Google Firebase. Your use of these services is subject to Google's terms and policies.</p>
+
+                <h4>8. Intellectual Property Rights</h4>
+                <p>The App and its original content, features, design, and functionality are owned by Ivikos and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws. You may not copy, modify, distribute, or create derivative works without our express written permission.</p>
+
+                <h4>9. Subscription Services and Payments</h4>
+                <p>Some features may require payment or subscription. By purchasing a subscription, you agree to:</p>
+                <ul>
+                    <li>Pay all fees associated with your chosen plan</li>
+                    <li>Automatic renewal unless cancelled before the renewal date</li>
+                    <li>Our refund policy as stated in the App and applicable app store policies</li>
+                    <li>Price changes with at least 30 days advance notice</li>
+                    <li>Cancellation terms as outlined in your subscription settings</li>
+                </ul>
+
+                <h4>10. Service Availability and Modifications</h4>
+                <p>We reserve the right to:</p>
+                <ul>
+                    <li>Modify, update, or discontinue the App or any features at any time</li>
+                    <li>Change usage limits, pricing, or subscription terms with notice</li>
+                    <li>Perform maintenance that may temporarily interrupt service</li>
+                    <li>Update our AI models or service providers as needed</li>
+                    <li>Implement new features or remove existing ones</li>
+                </ul>
+
+                <h4>11. Disclaimers and Limitation of Liability</h4>
+                <p><strong>Service Disclaimers:</strong></p>
+                <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND. WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+                
+                <p><strong>Spiritual and Entertainment Nature:</strong></p>
+                <p>I Ching readings and AI-generated guidance are provided for entertainment, personal reflection, and spiritual exploration. They should not be used as the sole basis for important life decisions.</p>
+
+                <p><strong>Limitation of Liability:</strong></p>
+                <p>IN NO EVENT SHALL IVIKOS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES RESULTING FROM YOUR USE OF THE APP.</p>
+
+                <h4>12. Account Termination</h4>
+                <p>We may terminate or suspend your account immediately, without prior notice, for:</p>
+                <ul>
+                    <li>Violation of these Terms of Use</li>
+                    <li>Abuse of our service or API limits</li>
+                    <li>Fraudulent or illegal activity</li>
+                    <li>Prolonged inactivity (with advance notice)</li>
+                </ul>
+                <p>You may delete your account at any time through the App settings. Upon termination, your access rights cease immediately.</p>
+
+                <h4>13. Privacy and Data Protection</h4>
+                <p>Your privacy is important to us. Please review our <a href="privacy-policy.html">Privacy Policy</a>, which explains how we collect, use, and protect your information. By using the App, you consent to our privacy practices.</p>
+
+                <h4>14. Updates and Modifications to Terms</h4>
+                <p>We reserve the right to modify these Terms at any time. We will notify you of material changes by:</p>
+                <ul>
+                    <li>Posting updated Terms in the App</li>
+                    <li>Updating the "Last Updated" date</li>
+                    <li>Sending you a notification through the App or email</li>
+                    <li>Requiring acceptance of new Terms before continued use</li>
+                </ul>
+
+                <h4>15. Governing Law and Dispute Resolution</h4>
+                <p>These Terms shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions. Any disputes arising from these Terms or your use of the App shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association.</p>
+
+                <h4>16. Contact Information</h4>
+                <p>If you have any questions about these Terms of Use, please contact us:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:legal@ivikos.com">legal@ivikos.com</a></li>
+                    <li><strong>Support:</strong> <a href="mailto:support@ivikos.com">support@ivikos.com</a></li>
+                    <li><strong>Address:</strong> 123 Innovation Drive, Tech Valley, CA 94000, United States</li>
+                    <li><strong>Phone:</strong> +1 (234) 567-8900</li>
+                </ul>
+
+                <h4>17. Severability and Entire Agreement</h4>
+                <p>If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions will remain in full force and effect. These Terms, together with our Privacy Policy, constitute the entire agreement between you and Ivikos regarding the use of the App.</p>
+
+                <h4>18. Age Requirements</h4>
+                <p>The App is intended for users aged 13 and older. Users under 18 should have parental or guardian consent before using our services. We do not knowingly collect personal information from children under 13.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Ivikos. All rights reserved.</p>
+                <p>Use of AI services subject to fair use policy and terms.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

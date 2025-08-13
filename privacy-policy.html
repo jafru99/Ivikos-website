@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Pocket Oracle | Ivikos</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #00d4ff, #ff00d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #00d4ff;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(90deg, #00d4ff, #ff00d4);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #ffffff;
+        }
+
+        .section h3 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #00d4ff;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            color: #cccccc;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .section ul {
+            color: #cccccc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Legal Content */
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .legal-content h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, #ffffff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .legal-content h4 {
+            color: #00d4ff;
+            font-size: 1.3rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .legal-content h4:first-of-type {
+            margin-top: 0;
+        }
+
+        .legal-content a {
+            color: #00d4ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .legal-content a:hover {
+            color: #ff00d4;
+            text-decoration: underline;
+        }
+
+        /* Back Button */
+        .back-button {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content p {
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 15px;
+            }
+
+            .legal-content {
+                padding: 20px;
+            }
+
+            .legal-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html">Ivikos</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pocket-oracle.html">Pocket Oracle</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <a href="pocket-oracle.html" class="back-button">← Back to Pocket Oracle</a>
+            <div class="legal-content">
+                <h1>Privacy Policy</h1>
+                <p><strong>Effective Date:</strong> January 15, 2025</p>
+                <p><strong>Last Updated:</strong> January 15, 2025</p>
+
+                <h4>1. Introduction</h4>
+                <p>Welcome to Pocket Oracle ("we," "our," or "us"). This Privacy Policy explains how Ivikos collects, uses, discloses, and safeguards your information when you use our mobile application Pocket Oracle ("App"). Our App provides AI-powered I Ching divination and guidance services. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the application.</p>
+
+                <h4>2. Information We Collect</h4>
+                <p><strong>Personal Information:</strong></p>
+                <ul>
+                    <li>Account information when you sign in with Google or email (name, email address, profile picture)</li>
+                    <li>Authentication credentials managed through Firebase Authentication</li>
+                    <li>User preferences and app settings</li>
+                    <li>Communication preferences and contact information</li>
+                </ul>
+                <p><strong>I Ching Reading Data:</strong></p>
+                <ul>
+                    <li>Questions you submit for I Ching consultations</li>
+                    <li>Reading results and interpretations generated by our AI system</li>
+                    <li>Reading history and summaries stored securely in Firebase Firestore</li>
+                    <li>Timestamps and reading metadata</li>
+                </ul>
+                <p><strong>Usage Information:</strong></p>
+                <ul>
+                    <li>App interactions and usage patterns</li>
+                    <li>Chat conversations with the AI assistant</li>
+                    <li>Device information (device type, operating system, app version)</li>
+                    <li>Log information (IP address, access times, feature usage)</li>
+                </ul>
+
+                <h4>3. Third-Party Services</h4>
+                <p><strong>OpenAI Integration:</strong></p>
+                <p>Our App uses OpenAI's GPT-4o-mini model to provide AI-powered I Ching interpretations and guidance. When you submit questions or interact with our AI assistant, your queries are processed through OpenAI's API. Please review <a href="https://openai.com/privacy/" target="_blank">OpenAI's Privacy Policy</a> and <a href="https://openai.com/terms/" target="_blank">Terms of Use</a> to understand how OpenAI handles data.</p>
+                
+                <p><strong>Google Sign-In:</strong></p>
+                <p>When you choose to sign in with Google, we receive basic profile information (name, email, profile picture) as permitted by your Google account settings. This integration is governed by Google's privacy policies.</p>
+
+                <p><strong>Firebase Services:</strong></p>
+                <p>We use Google Firebase for authentication and data storage. Your reading summaries and user data are stored securely in Firebase Firestore, protected by Firebase Authentication using your unique user ID. Only you can access your personal reading data.</p>
+
+                <h4>4. How We Use Your Information</h4>
+                <p>We use the information we collect to:</p>
+                <ul>
+                    <li>Provide personalized I Ching readings and AI-powered guidance</li>
+                    <li>Maintain your reading history and summaries securely</li>
+                    <li>Authenticate your account and ensure data security</li>
+                    <li>Improve our AI responses and interpretation accuracy</li>
+                    <li>Contact you regarding app updates, security issues, or service improvements</li>
+                    <li>Respond to your comments, questions, and support requests</li>
+                    <li>Monitor and analyze usage patterns to enhance user experience</li>
+                    <li>Detect, investigate and prevent fraudulent or unauthorized access</li>
+                </ul>
+
+                <h4>5. Data Security and Storage</h4>
+                <p><strong>Firebase Security:</strong></p>
+                <p>Your personal reading data is stored in Firebase Firestore with robust security measures:</p>
+                <ul>
+                    <li>Data is encrypted in transit and at rest</li>
+                    <li>Access is restricted using Firebase Authentication with your unique user ID</li>
+                    <li>Only authenticated users can access their own data</li>
+                    <li>We implement Firebase Security Rules to prevent unauthorized access</li>
+                </ul>
+                <p>However, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure. While we strive to protect your personal information, we cannot guarantee its absolute security.</p>
+
+                <h4>6. Information Sharing</h4>
+                <p>We may share your information in the following limited situations:</p>
+                <ul>
+                    <li><strong>With Your Consent:</strong> We may disclose your personal information for any purpose with your explicit consent</li>
+                    <li><strong>Service Providers:</strong> Third-party companies that perform services on our behalf (OpenAI for AI processing, Google for authentication and storage)</li>
+                    <li><strong>Legal Requirements:</strong> If required by law, court order, or to protect our rights and safety</li>
+                    <li><strong>Business Transfers:</strong> In connection with any merger, sale of assets, or acquisition of our business</li>
+                </ul>
+                <p><strong>We never sell, rent, or trade your personal information or reading data to third parties for marketing purposes.</strong></p>
+
+                <h4>7. Data Retention</h4>
+                <p>We retain your information as follows:</p>
+                <ul>
+                    <li>Account information: Until you delete your account</li>
+                    <li>Reading history and summaries: Until you delete them or your account</li>
+                    <li>Usage data: Up to 2 years for analytics and improvement purposes</li>
+                    <li>Legal compliance data: As required by applicable law</li>
+                </ul>
+                <p>You can delete your reading history, individual readings, or your entire account at any time through the app settings.</p>
+
+                <h4>8. Your Rights and Controls</h4>
+                <p>You have the following rights regarding your personal information:</p>
+                <ul>
+                    <li><strong>Access:</strong> View and download your personal information and reading history</li>
+                    <li><strong>Correction:</strong> Update or correct inaccurate personal information</li>
+                    <li><strong>Deletion:</strong> Delete your readings, reading history, or entire account</li>
+                    <li><strong>Restriction:</strong> Limit how we process your information</li>
+                    <li><strong>Data Portability:</strong> Export your reading data in a portable format</li>
+                    <li><strong>Objection:</strong> Object to certain types of processing</li>
+                </ul>
+                <p>To exercise these rights, please contact us using the information provided below or use the controls available in the app.</p>
+
+                <h4>9. Contact Information Use</h4>
+                <p>Your contact information (email address) will only be used for:</p>
+                <ul>
+                    <li>Account-related communications (password resets, security alerts)</li>
+                    <li>Important app updates and service announcements</li>
+                    <li>Customer support and technical assistance</li>
+                    <li>Security notifications and fraud prevention</li>
+                    <li>Periodic app improvement surveys (with your consent)</li>
+                </ul>
+                <p>We will never use your contact information for unsolicited marketing or share it with third parties for their marketing purposes.</p>
+
+                <h4>10. Children's Privacy</h4>
+                <p>Our App is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you become aware that a child has provided us with personal information, please contact us, and we will take steps to remove such information.</p>
+
+                <h4>11. International Data Transfers</h4>
+                <p>Your information may be transferred to and processed in countries other than your own, including the United States, where our service providers (OpenAI, Google Firebase) operate. We ensure that such transfers comply with applicable data protection laws.</p>
+
+                <h4>12. Changes to This Privacy Policy</h4>
+                <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:</p>
+                <ul>
+                    <li>Posting the new Privacy Policy in the app</li>
+                    <li>Updating the "Last Updated" date</li>
+                    <li>Sending you a notification through the app or email</li>
+                </ul>
+                <p>You are advised to review this Privacy Policy periodically for any changes.</p>
+
+                <h4>13. Contact Us</h4>
+                <p>If you have any questions about this Privacy Policy, your data, or our practices, please contact us:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:privacy@ivikos.com">privacy@ivikos.com</a></li>
+                    <li><strong>Support:</strong> <a href="mailto:support@ivikos.com">support@ivikos.com</a></li>
+                    <li><strong>Address:</strong> 123 Innovation Drive, Tech Valley, CA 94000, United States</li>
+                    <li><strong>Phone:</strong> +1 (234) 567-8900</li>
+                </ul>
+
+                <h4>14. External Links</h4>
+                <p>For more information about our third-party service providers' privacy practices:</p>
+                <ul>
+                    <li><a href="https://openai.com/privacy/" target="_blank">OpenAI Privacy Policy</a></li>
+                    <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+                    <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Information</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Ivikos. All rights reserved.</p>
+                <p>Your privacy and data security are our top priorities.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

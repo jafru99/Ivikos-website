@@ -47,6 +47,21 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            transition: all 0.3s ease;
+        }
+
+        .logo-text {
             font-size: 2.5rem;
             font-weight: bold;
             background: linear-gradient(45deg, #00d4ff, #ff00d4);
@@ -56,9 +71,8 @@
             text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
         }
 
-        .logo a {
-            text-decoration: none;
-            color: inherit;
+        .logo:hover .logo-icon {
+            transform: scale(1.1) rotate(5deg);
         }
 
         .nav-links {
@@ -123,7 +137,7 @@
         .hero-logo {
             width: 80px;
             height: 80px;
-            border-radius: 16px;
+            border-radius: 20px;
             box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
             animation: logoGlow 2s ease-in-out infinite alternate;
         }
@@ -354,15 +368,25 @@
                 width: 100px;
                 height: 100px;
             }
+
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .logo-text {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <nav class="container">
-            <div class="logo">
-                <a href="index.html">Ivikos</a>
-            </div>
+            <a href="index.html" class="logo">
+                <img src="ivikos-brain-icon.jpeg" alt="Ivikos Brain Icon" class="logo-icon">
+                <span class="logo-text">Ivikos</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="pocket-oracle.html" class="active">Pocket Oracle</a></li>
